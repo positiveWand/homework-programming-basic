@@ -1,3 +1,4 @@
 lab/
 ast_analyze
 vulnerability_analyze
+*.pdf
