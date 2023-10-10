@@ -1,0 +1,21 @@
+# [프로그래밍 기초] 과제
+## 파일 설명
+- `generate_ast.py`
+  - 멘토님으로부터 제공받은 AST 생성 프로그램
+  - 처음 제공받은 코드에서 변형하여 AST를 표준출력(stdout)이 아닌 `ast.json` 파일에 저장한다
+- `ast.json`
+  - `generate_ast.py` 프로그램을 실행한 결과물, 즉 C언어 소스코드 AST
+- `ast_analyze.c`
+  - [기본 과제]를 위해 구현한 프로그램
+  - `ast.json` 파일을 읽어 C언어 소스코드에 대한 여러 가지 정보를 추출한다
+- `vulnerability_analyze.c`
+  - [심화 과제]를 위해 구현한 프로그램
+  - `ast.json` 파일을 읽어 C언어 소스코드에 존재하는 취약점(버퍼오버플로우가 발생할 수 있는 취약한 함수 호출)을 검사한다
+- `test.c`
+  - [기본 과제]와 [심화 과제]를 위한 분석 대상 코드
+  - `ast_analyze.c` 프로그램을 통해 정보를 추출할 코드
+  - `vunlnerability_analyze.c` 프로그램을 통해 취약점을 분석할 코드
+- `vunlerable.c`
+  - [심화 과제]를 위한 패턴 추출 코드
+  - [[링크](https://github.com/muhammet-mucahit/Security-Exercises/blob/master/BufferOverflow-Project/vulnerable.c)] 로부터 얻은 취약점이 존재하는 코드
+  - 이 코드로부터 취약점 패턴을 추출
